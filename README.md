@@ -1,2 +1,2 @@
 # mvp-eureka
-MVC de uma plataforma web de cursos para a empresa de ensino Eureka.
+MVP de uma plataforma web de cursos para a empresa de ensino Eureka.
