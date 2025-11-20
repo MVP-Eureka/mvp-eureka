@@ -6,7 +6,7 @@ class UserController {
         this.userservice = new UserService(User);
     }
 
-    register = async (res,req) => {
+    register = async (req,res) => {
         const userdata = req.body;
 
         const user = await this.userservice.createUser(userdata);
