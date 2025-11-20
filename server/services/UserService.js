@@ -1,4 +1,4 @@
-
+import ApiError from '../utils/errors.js';
 class UserService {
     constructor(usermodel) {
         this.usermodel = usermodel;
@@ -6,21 +6,22 @@ class UserService {
 
     createUser = async (userdata) => {
         if(!userdata.nome || !userdata.email || !userdata.senha) {
-            return res.status(401).json({body: 'All fields are required'});
+            throw ApiError.badRequest('All fields are required');
         }
 
         const u = await this.usermodel.findOne({email: userdata.email});
 
         if(u) {
-            return res.status(401).json({body: 'User already exists'});
+            throw ApiError.badRequest('User already exists');
         }
 
         const user = new this.usermodel(userdata);
 
         try {
             await user.save();
+            return user;
         } catch {
-            return res.status(401).json({body: 'Failed to create user'});
+            throw ApiError.badRequest('Failed to create user');
         }
     }
 }

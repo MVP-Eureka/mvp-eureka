@@ -2,6 +2,7 @@ import express, { json } from 'express';
 import cors from 'cors';
 import "dotenv/config"
 import routes from './routes.js';
+import mongoose from './database/db.js';
 
 const PORT = process.env.PORT; 
 const app = express();
