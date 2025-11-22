@@ -20,4 +20,4 @@ para organização do codigo:
 eles vão baixar o tailwind e uma funcionalidade da extensão Prettier - CF 
 de formatação automatica das classes no tailwind, respectivamente
 
-<------------------------------------------------------------------------------>
+<------------------------------------------------------------------------------->
