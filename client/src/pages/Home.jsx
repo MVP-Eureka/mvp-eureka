@@ -1,5 +1,5 @@
 import React from 'react';
-import imgHome from '../assets/images/Professor_Nonato.png'; // importar imagens aqui
+import imgHome from '../assets/images/professora_bruna.png'; // importar imagens aqui
 
 {/* Abandonai toda a esperança, vós que entrais */}
 
@@ -39,11 +39,14 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Círculo com gradiente atrás da imagem */}
+        <div className="absolute bottom-[60px] right-16 w-[440px] h-[440px] rounded-full bg-gradient-to-br from-yellow-400 to-blue-500 blur-[2px] z-0" />
+
         {/* Lado direito (imagem) */}
         <img 
           src={imgHome} 
           alt="Professor" 
-          className="absolute bottom-19 right-0 w-[400px] object-contain"
+          className="absolute bottom-2 right-25 w-[390px] object-contain"
         />
       </div>
     </div>
