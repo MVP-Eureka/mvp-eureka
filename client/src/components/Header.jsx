@@ -18,7 +18,7 @@ const Header = () => {
         </div>
 
         {/* Botão de login */} {/* abaixo as config da função de trocar de cor quando passar o mouse em cima */}
-        <Link to="/login" className='text-white font-lato-bold flex-items-center rounded-full border-2 border-white px-8 py-2 
+        <Link to="/login" className='text-white font-bold flex-items-center rounded-full border-2 border-white px-8 py-2 
         cursor-pointer hover:bg-gray-200 hover:text-blue-800 transition duration-300'>
             LOGIN
         </Link>
