@@ -1,4 +1,5 @@
 import React from 'react'
+import imgLogo from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom'
 
 {/* Cabeçalho da pagina */}
@@ -13,8 +14,9 @@ const Header = () => {
         <div className='flex items-center'>
             <img 
              className='h-16'
-             src="images/Logo.png" alt="Logo Eureka"
-             />
+             src={imgLogo} 
+             alt="Professor" 
+            />
         </div>
 
         {/* Botão de login */} {/* abaixo as config da função de trocar de cor quando passar o mouse em cima */}
