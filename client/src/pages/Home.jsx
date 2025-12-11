@@ -1,7 +1,7 @@
 import React from "react";
-import imgHome from "../assets/images/professora_bruna.png"; // importar imagens aqui
+import imgHome from "../assets/images/Professor_Nonato.png"; // importar imagens aqui
 import imgSombraHome from "../assets/images/SombraBruna2.png"; // importar imagens aqui
-import imgJaquelineHome from "../assets/images/Jaqueline.png"; // importar imagens aqui
+import imgJaquelineHome from "../assets/images/professora_01.png"; // importar imagens aqui
 
 {
   /* Abandonai toda a esperança, vós que entrais */
@@ -22,7 +22,7 @@ const Home = () => {
 
             {/* Linha 2 – título */}
             <h1 className="font-momo mt-4 text-4xl text-white">
-              APRENDIZAGEM <span className="tracking-widest">EUREKA</span>
+              APRENDIZAGEM <span className="tracking-widest">ONLINE</span>
             </h1>
 
             {/* Descrição */}
@@ -54,7 +54,7 @@ const Home = () => {
           <img
             src={imgHome}
             alt="Professor"
-            className="absolute right-40 bottom-2 w-[390px] object-contain"
+            className="absolute right-35 bottom-19 w-[390px] object-contain"
           />
         </section>
       </section>
@@ -66,7 +66,7 @@ const Home = () => {
             <img
               src={imgJaquelineHome}
               alt="Imagem ilustrativa"
-              className="absolute top-139 left-40 w-[370px] object-contain"
+              className="absolute top-149 left-35 w-[390px] object-contain"
             />
           </div>
 
@@ -82,8 +82,47 @@ const Home = () => {
               objetivo é fortalecer o aprendizado, promover autonomia nos
               estudos e garantir o sucesso escolar.
             </p>
+
+            <div className="mt-8 flex gap-6">
+              <button className="font-momo rounded-full bg-yellow-400 px-6 py-3 text-blue-900 shadow-md transition hover:bg-yellow-300">
+                SEJA UM ALUNO
+              </button>
+            </div>
           </div>
         </div>
+      </section>
+      {/* SESSÃO 3 — AZUL Carrossel */}
+      <section className="overflow-hidden bg-gradient-to-r from-blue-600 to-blue-400 py-20">
+        <section className="mx-auto flex max-w-7xl items-center justify-between px-6">
+          {/* Lado esquerdo (textos) */}
+          {/* Linha 1 */}
+          <div className="max-w-xl">
+            <p className="font-lato-bold text-lg tracking-wide text-white">
+              TEXTOTEXTO
+            </p>
+
+            {/* Linha 2 – título */}
+            <h1 className="font-momo mt-4 text-4xl text-white">
+              TEXTO <span className="tracking-widest">TEXTO</span>
+            </h1>
+
+            {/* Descrição */}
+            <p className="font-lato-italic mt-6 text-lg leading-relaxed text-white">
+              TEXTOTEXTO
+            </p>
+
+            {/* Botões */}
+            <div className="mt-8 flex gap-6">
+              <button className="font-momo rounded-full bg-yellow-400 px-6 py-3 text-blue-900 shadow-md transition hover:bg-yellow-300">
+                TEXTOTEXTO
+              </button>
+
+              <button className="font-momo rounded-full bg-yellow-400 px-6 py-3 text-blue-900 shadow-md transition hover:bg-yellow-300">
+                TEXTOTEXTO
+              </button>
+            </div>
+          </div>
+        </section>
       </section>
     </>
   );
