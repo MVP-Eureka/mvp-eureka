@@ -8,13 +8,13 @@ const Header = () => {
   return (
     <div className='shadow-md bg-blue-800'>
     {/* Configurações dos itens que tão no cabeçalho*/}
-    <div className="flex items-center justify-between px-9 py-4 max-w-7xl mx-auto color">
+    <div className="flex items-center justify-between px-9 py-4 max-w-7xl mx-auto">
 
         {/* Config da imagem do eureka */}
         <div className='flex items-center'>
             <img 
-             className='h-16'
-             src={imgLogo} 
+             className='h-17'
+             src={"../src/assets/images/Logo_eureka.png"} 
              alt="Professor" 
             />
         </div>

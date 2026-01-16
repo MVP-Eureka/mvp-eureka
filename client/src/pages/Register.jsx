@@ -1,61 +1,79 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
-const Register = () => {
-  return ( 
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-400">
-      
-      {/* Card branco */}
-      <div className="bg-white p-8 rounded-3xl shadow-xl w-full max-w-lg flex flex-col items-center gap-5">
+// Imagem
+import logoEureka from "../assets/images/Logo_eureka.png";
 
-        {/* Imagem do eureka */}
-        <img 
-          className='h-18'
-          src="../src/assets/images/Logo.png"
+const Register = () => {
+  return (
+    <section className="flex min-h-screen items-center justify-center bg-gradient-to-r from-blue-600 to-blue-400">
+      {/* Card */}
+      <div className="flex w-full max-w-lg flex-col items-center gap-5 rounded-3xl bg-white p-8 shadow-xl">
+        
+        {/* Logo */}
+        <img
+          src={logoEureka}
           alt="Logo Eureka"
+          className="h-18"
         />
 
-        {/* Texto maior */}
-        <h1 className='text-2xl font-lato-bold'>
+        {/* Título */}
+        <h1 className="font-lato-bold text-2xl">
           Cadastre-se grátis
         </h1>
 
-        {/* inicio do formulario */}
-        {/* texto acima do email */}
-        <form className='flex flex-col gap-2 w-full font-lato'>
-          <p>
-            Endereço de e-mail
-          </p>
-
-          {/* Section de colocar o email */}
-          <input type="email" className='w-full border border-gray-300 px-4 py-2' placeholder='Digite seu e-mail' />
-
-          {/* texto acima da senha */}
-          <p>
-            Senha de acesso
-          </p>
-
-          {/* Section de colocar a senha */}
-          <input type="password" className='w-full border border-gray-300 px-4 py-2' placeholder='Digite sua senha' />
+        {/* Formulário */}
+        <form className="font-lato flex w-full flex-col gap-2">
           
-          {/* texto acima da senha */}
-          <p>
-            Nome completo
-          </p>
+          <label htmlFor="name">Nome completo</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Digite seu nome"
+            className="w-full rounded-full border border-gray-300 px-4 py-2"
+            required
+          />
 
-          {/* Section de colocar a senha */}
-          <input type="text" className='w-full border border-gray-300 px-4 py-2' placeholder='Digite seu nome' />
+          <label htmlFor="email">Endereço de e-mail</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Digite seu e-mail"
+            className="w-full rounded-full border border-gray-300 px-4 py-2"
+            required
+          />
 
-          {/* Botão de iniciar sessão */}
-          <button className='cursor-pointer text-amber-50 bg-blue-800 w-full font-momo rounded-full border border-gray-300 hover:bg-blue-700 px-4 py-2'>
+          <label htmlFor="password">Senha de acesso</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Digite sua senha"
+            className="w-full rounded-full border border-gray-300 px-4 py-2"
+            required
+          />
+
+          <button
+            type="submit"
+            className="font-momo mt-2 w-full rounded-full bg-blue-800 px-4 py-2 text-amber-50 transition hover:bg-blue-700"
+          >
             Criar conta
           </button>
-
-        {/* fim do formulario */}
         </form>
+
+        {/* Link para login */}
+        <p className="font-lato">
+          Já tem uma conta?{" "}
+          <Link
+            to="/Login"
+            className="font-momo text-blue-500 underline hover:text-blue-600"
+          >
+            Entrar
+          </Link>
+        </p>
       </div>
     </section>
   );
 };
 
-export default Register
+export default Register;
+
