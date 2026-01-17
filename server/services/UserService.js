@@ -32,7 +32,7 @@ class UserService {
     }
 
     getUser = async (userdata) => {
-        if(!userdata.email || !userdata.senha) {
+        if(!userdata.email || !userdata.password) {
             throw ApiError.badRequest('All fields are required');
         }
 
@@ -44,7 +44,9 @@ class UserService {
 
         const user = await this.usermodel.findOne({email: userdata.email});
 
-        if(userdata.senha != user?.senha || userdata.email != user?.email) {
+        console.log({email: user?.email, password: user?.senha});
+
+        if(userdata.password != user?.senha || userdata.email != user?.email) {
             throw ApiError.unauthorized('Invalid email or password');
         }
 
