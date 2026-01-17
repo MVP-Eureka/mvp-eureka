@@ -14,7 +14,7 @@ const Header = () => {
         <div className='flex items-center'>
             <img 
              className='h-17'
-             src={"../src/assets/images/Logo_eureka.png"} 
+             src={"../src/assets/images/Logo.png"} 
              alt="Professor" 
             />
         </div>
