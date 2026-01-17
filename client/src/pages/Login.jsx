@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Imagens
 import googleLogo from "../assets/images/google.png";
 import logoEureka from "../assets/images/Logo_eureka.png";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -33,6 +35,8 @@ const Login = () => {
       console.error(error);
       alert("Falha no login: " + error.message);
     }
+
+    navigate("/inicial")
   };
 
   return (
