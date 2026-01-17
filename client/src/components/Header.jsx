@@ -15,7 +15,7 @@ const Header = () => {
             <img 
              className='h-17'
              src={"../src/assets/images/Logo.png"} 
-             alt="Professor" 
+             alt="Logo" 
             />
         </div>
 
