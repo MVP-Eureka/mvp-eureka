@@ -33,14 +33,30 @@ class UserController {
         try {
             const token = await this.tokenService.getAcessToken();
 
+            console.log("Acess token:", token);
+
+            res.cookie("acess_token", token, {
+                maxAge: 1000 * 60 * 60, 
+                httpOnly: true,    
+                secure: false,   
+                sameSite: "lax"
+            }); 
+        
+            //req.headers['Authorization'] = 'Bearer: ' + token;
+
             res.status(200).json({user: user, acess_token: token});
         } catch {
-            throw ApiError.notFound("Unable to login now. Please try again.");
+            throw ApiError.notFound("Unable to login now. Please try later.");
         }
     }
 
     protected = async (req,res) => {
         res.status(200).json({message: 'Usuario autenticado'});
+    }
+
+    teste = async (req,res) => {
+        res.status(200).json({message: req.cookies?.acess_token});
+        console.log(req.cookies?.acess_token);
     }
 }
 
