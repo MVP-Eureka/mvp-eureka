@@ -50,6 +50,26 @@ class UserController {
         }
     }
 
+    editUser = async (req, res) => {
+        try {
+            const {userdata, nome} = req.body;
+
+            const user = await this.userservice.updateUser({userdata: userdata, nome: nome});
+
+            if(!user) {
+                res.status(401).json({message: 'Usuario nao encontrado'});
+            }
+
+            console.log("Updated user: " + user);
+
+            res.status(200).json(user);
+
+        } catch(error) {
+            res.status(400).json({ erro: error.message });
+            throw new Error(error.message);
+        }
+    }
+
     protected = async (req,res) => {
         res.status(200).json({message: 'Usuario autenticado'});
     }
