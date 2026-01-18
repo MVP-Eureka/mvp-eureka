@@ -18,6 +18,7 @@ const router = express.Router();
 
 router.post('/register', userController.register);
 router.post('/login', userController.login);
+router.post('/edit', userController.editUser);
 router.post('/u/protected', customJwtMiddleware, userController.protected);
 router.get('/teste', userController.teste);
 
