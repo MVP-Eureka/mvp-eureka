@@ -31,12 +31,16 @@ const Login = () => {
       const data = await response.json();
       console.log("Resposta do login:", data);
       alert("Login realizado com sucesso!");
+
+      if(data != undefined) {
+        navigate("/inicial");
+        localStorage.setItem("nome", data.user.nome);
+      }
+
     } catch (error) {
       console.error(error);
       alert("Falha no login: " + error.message);
     }
-
-    navigate("/inicial")
   };
 
   return (
