@@ -19,7 +19,7 @@ const Userstats = () => {
       <div className="flex flex-col">   
 
         <p className="text-lg font-semibold text-gray-900">
-          Bem-vindo(a) de volta, {user?.split(' ').slice(0, 2).join(' ') || ''}
+          Bem-vindo(a) de volta, {user?.trim().split(/\s+/).slice(0, 2).join(' ') || ''}
         </p>
 
         <p className="text-sm text-7xl text-gray-500">
