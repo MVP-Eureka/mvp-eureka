@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 {/* Cabeçalho da pagina */}
 
 const Userstats = () => {
+  let user = localStorage.getItem("nome");
+
   return (
     <div className="w-full bg-white px-40 py-11 flex items-center border-b">
       
@@ -17,11 +19,11 @@ const Userstats = () => {
       <div className="flex flex-col">   
 
         <p className="text-lg font-semibold text-gray-900">
-          Bem-vindo(a) de volta, Pedro Henrique
+          Bem-vindo(a) de volta, {user?.split(' ').slice(0, 2).join(' ') || ''}
         </p>
 
         <p className="text-sm text-7xl text-gray-500">
-          Pedro Henrique Martins Coelho da Silva
+          {user}
         </p>
 
         <a
