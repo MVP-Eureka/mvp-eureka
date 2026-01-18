@@ -2,10 +2,13 @@ import React from 'react'
 import imgLogo from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom'
 import logoEureka from "../assets/images/Logo_eureka.png";
+import { useNavigate } from "react-router-dom";
 
 {/* Cabeçalho da pagina */}
 
 const Header = () => {
+  const navigator = useNavigate();
+
   return (
     <div className='shadow-md bg-blue-800'>
     {/* Configurações dos itens que tão no cabeçalho*/}
@@ -17,6 +20,7 @@ const Header = () => {
              className='h-17'
              src={logoEureka} 
              alt="Logo" 
+             onClick={() => navigator("/")}
             />
         </div>
 
