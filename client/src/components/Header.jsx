@@ -1,6 +1,7 @@
 import React from 'react'
 import imgLogo from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom'
+import logoEureka from "../assets/images/Logo_eureka.png";
 
 {/* Cabeçalho da pagina */}
 
@@ -14,8 +15,8 @@ const Header = () => {
         <div className='flex items-center'>
             <img 
              className='h-17'
-             src={"../src/assets/images/Logo_eureka.png"} 
-             alt="Professor" 
+             src={logoEureka} 
+             alt="Logo" 
             />
         </div>
 

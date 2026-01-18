@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/api/login", {
+      const response = await fetch('https://mvp-eureka.onrender.com/api/login', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,12 +31,16 @@ const Login = () => {
       const data = await response.json();
       console.log("Resposta do login:", data);
       alert("Login realizado com sucesso!");
+
+      if(data != undefined) {
+        navigate("/inicial");
+        localStorage.setItem("nome", data.user.nome);
+      }
+
     } catch (error) {
       console.error(error);
       alert("Falha no login: " + error.message);
     }
-
-    navigate("/inicial")
   };
 
   return (

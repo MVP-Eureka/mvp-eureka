@@ -52,6 +52,26 @@ class UserService {
 
         return user;
     }
+
+    updateUser = async (user) => {
+        const u = await this.usermodel.findOne({nome: user.nome});
+
+        const { nome, email, senha } = user.userdata;
+
+        // Monta objeto apenas com campos enviados
+        const dadosAtualizados = {};
+        if (nome) dadosAtualizados.nome = nome;
+        if (email) dadosAtualizados.email = email;
+        if (senha) dadosAtualizados.senha = senha;
+
+        const usuarioAtualizado = await this.usermodel.findByIdAndUpdate(
+        u._id,
+        { $set: dadosAtualizados },
+        { new: true, runValidators: true }
+        );
+
+        return usuarioAtualizado;
+    }
 }
 
 export default UserService;
