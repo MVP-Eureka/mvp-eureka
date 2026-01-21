@@ -25,13 +25,6 @@ const Userstats = () => {
         <p className="text-sm text-7xl text-gray-500">
           {user}
         </p>
-
-        <a
-          href="#"  
-          className="text-sm text-blue-600 hover:underline w-fit"
-        >
-          Editar Perfil
-        </a>
       </div>
     </div>
   );
