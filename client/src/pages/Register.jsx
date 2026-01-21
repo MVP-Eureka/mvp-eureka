@@ -31,7 +31,7 @@ const Register = () => {
       alert("Cadastro realizado com sucesso!");
     } catch (error) {
       console.error(error);
-      alert("Falha no cadastro: " + error.message);
+      alert("Falha no cadastro.");
     }
   };
 
