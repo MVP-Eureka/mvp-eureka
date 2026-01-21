@@ -87,15 +87,6 @@ const Login = () => {
             required
           />
 
-          <div className="text-right">
-            <Link
-              to="/Recuperação"
-              className="font-momo text-blue-500 underline hover:text-blue-600"
-            >
-              Esqueceu a senha?
-            </Link>
-          </div>
-
           <button
             type="submit"
             className="font-momo w-full rounded-full bg-blue-800 px-4 py-2 text-amber-50 transition hover:bg-blue-700"
@@ -103,17 +94,6 @@ const Login = () => {
             Iniciar Sessão
           </button>
         </form>
-
-        {/* Login com Google */}
-        <button
-          onClick={() => console.log("Login com Google")}
-          className="flex w-full items-center justify-center gap-3 rounded-full border border-gray-300 py-3 transition hover:bg-gray-100"
-        >
-          <img src={googleLogo} alt="Google" className="h-6" />
-          <span className="font-lato text-gray-600">
-            Entrar com Google
-          </span>
-        </button>
 
         {/* Cadastro */}
         <p className="font-lato">
