@@ -4,6 +4,7 @@ import Userstats from "./components/Userstats";
 import Home from "./pages/Home";
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import User from "./pages/User"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       <Route path="/login" element={ <> <Login /> </> } />
 
       <Route path="/register" element={<> <Register/> </>} />
+
+      <Route path="/editar" element={<> <Header/> <User/> </>} />
+
+      
 
       <Route
         path="/inicial" element={
